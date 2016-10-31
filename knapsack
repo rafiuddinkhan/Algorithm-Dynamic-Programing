@@ -1,0 +1,10 @@
+Let i be the highest-numbered item in an optimal solution S for W pounds. 
+Then S` = S - {i} is an optimal solution for W - wi pounds 
+and the value to the solution S is Vi plus the value of the subproblem.
+We can express this fact in the following formula: define c[i, w] to be the solution for items  1,2, . . . , i and
+maximum weight w. Then
+
+0	if i = 0 or w = 0
+c[i,w]  =	c[i-1, w]	if wi ≥ 0
+max [vi + c[i-1, w-wi], c[i-1, w]}	if i>0 and w ≥  wi
+ 
